@@ -11,6 +11,7 @@ var imageDiv = document.getElementById("image");
 
 function setZipCode(value) {
     zipCode = value
+    var api = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + "&appid=4af16e039a66300f9ce07ec031c6035e";
 }
 
 function start() {
@@ -37,7 +38,6 @@ function wrongZip() {
     container4Div.style.display = "none";
     errorDiv.style.display = "block";
 }
-var api = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + "&appid=4af16e039a66300f9ce07ec031c6035e";
 
 
 const axios = require('axios');
