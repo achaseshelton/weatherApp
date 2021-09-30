@@ -6,8 +6,10 @@ var conditionsDiv = document.getElementById("conditions");
 var mainDiv = document.getElementById("main");
 var errorDiv = document.getElementById("error");
 
-var zipCode =
-var api = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + "&appid=4af16e039a66300f9ce07ec031c6035e";
+
+function setZipCode(value) {
+    zipCode = value
+}
 
 function start() {
     mainDiv.style.display = "none";
@@ -21,18 +23,19 @@ function updateWeather() {
     kelvinDiv.innerText = temperature;
     celciusDiv.innerText = Math.round(temperature - 273.15);
     farenheitDiv.innerText = Math.round(((temperature - 274.15) * 1.8) + 32);
-    conditionsDiv.innerText = 
 }
 
 function wrongZip() {
     mainDiv.style.display = "none";
     errorDiv.style.display = "block";
 }
+var api = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + "&appid=4af16e039a66300f9ce07ec031c6035e";
+
 
 const axios = require('axios');
 
 // Make a request for a user with a given ID
-axios.get("https://api.openweathermap.org/data/2.5/weather?zip=40515&appid=4af16e039a66300f9ce07ec031c6035e")
+axios.get(api)
   .then(function (response) {
     // handle success
     let temperature = response.data.main.temp;

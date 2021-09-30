@@ -16,7 +16,7 @@
 <body onload="start()">
     <div class="container d-flex justify-content-center align-items-center" id="search">
         <form class="d-flex" id="bar">
-        <input class="form-control me-2" type="search" placeholder="Zip Code" aria-label="Zip Code">
+        <input class="form-control me-2" onchange="setZipCode(this.value)" type="search" placeholder="Zip Code" aria-label="Zip Code">
         <button class="btn btn-outline-success" type="submit" id="button">Get Weather!!</button>
         </form>
     </div>
