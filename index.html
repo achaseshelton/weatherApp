@@ -11,16 +11,17 @@
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link href="./css/style.css" rel="stylesheet">
     <title>Weather App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body onload="start()">
     <div class="container d-flex justify-content-center align-items-center" id="search">
         <form class="d-flex" id="bar">
         <input class="form-control me-2" onchange="setZipCode(this.value)" type="search" placeholder="Zip Code" aria-label="Zip Code">
-        <button class="btn btn-outline-success" type="submit" id="button">Get Weather!!</button>
+        <button class="btn btn-outline-success" onclick="axios.get()" type="submit" id="button">Get Weather!!</button>
         </form>
     </div>
-    <div class="container d-grid gap-3" id="main">
+    <div class="container d-grid gap-3" id="weather">
         <div class="container border border-dark" id="container2">
             <div class="row border border-dark">
                 <div class="col text-center h3">City</div>
@@ -34,9 +35,9 @@
                 <div class="col text-center h3">Temperature</div>
             </div>
             <div class="row">
-                <div class="col text-center h4 border border-dark" id="kelvin">K</div>
-                <div class="col text-center h4 border border-dark" id="celcius">C</div>
-                <div class="col text-center h4 border border-dark" id="farenheit">F</div>
+                <div class="col text-center h4 border border-dark" id="kelvin"></div>
+                <div class="col text-center h4 border border-dark" id="celcius"></div>
+                <div class="col text-center h4 border border-dark" id="farenheit"></div>
             </div>
         </div>
         <div class="container" id="container4">
@@ -44,7 +45,7 @@
                 <div class="col text-center h3">Weather Conditions</div>
             </div>
             <div class="row border border-dark">
-                <div class="col text-center h4" id="conditions">Rainy</div>
+                <div class="col text-center h4" id="conditions"></div>
             </div>
         </div>
         <div class="container d-flex justify-content-center align-items-center" id="image">
