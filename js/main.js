@@ -39,9 +39,6 @@ function wrongZip() {
     errorDiv.style.display = "block";
 }
 
-
-const axios = require('axios');
-
 // Make a request for a user with a given ID
 axios.get(api)
   .then(function (response) {
@@ -50,10 +47,12 @@ axios.get(api)
     let place = response.data.name;
     console.log(temperature);
     console.log(place);
+    updateWeather();
   })
   .catch(function (error) {
     // handle error
     console.log(error);
+    wrongZip();
   })
 
   document.onload = start;
