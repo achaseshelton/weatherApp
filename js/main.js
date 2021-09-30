@@ -72,13 +72,13 @@ function axiosCall() {
             farenheitDiv.innerText = Math.round(((temperature - 274.15) * 1.8) + 32) + " °F";
             conditionsDiv.innerText = weatherType;
             if (temperature > 294) {
-                image.src = "./img/beach.jpg";
+                image.src = "./img/hot.png";
             };
             if ((temperature < 293) && (temperature > 283)) {
-                image.src = "./img/lightjacket.jpg";
+                image.src = "./img/thermometer.png";
             };
             if (temperature < 282) {
-                image.src = "./img/heavyjacket.jpg"
+                image.src = "./img/cold.png"
             };
         })
         .catch(function (error) {
