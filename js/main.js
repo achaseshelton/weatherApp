@@ -11,6 +11,7 @@ var imageDiv = document.getElementById("image");
 var conditionsDiv = document.getElementById("conditions");
 var buttonDiv = document.getElementById("button");
 var zipCode = null;
+var searchBoxDiv = document.getElementById("searchBox");
 
 
 function start() {
@@ -41,7 +42,12 @@ function start() {
 // }
 
 // Make a request for a user with a given ID
-
+searchBoxDiv.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("button").click();
+  }
+});
 buttonDiv.addEventListener("click", axiosCall);
 function axiosCall() {
     zipCode = document.getElementById("searchBox").value;
