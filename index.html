@@ -16,15 +16,15 @@
 
 <body onload="start()">
     <div class="container d-flex justify-content-center align-items-center" id="search">
-        <form class="d-flex" id="bar">
-        <input class="form-control me-2" onchange="setZipCode(this.value)" type="search" placeholder="Zip Code" aria-label="Zip Code">
-        <button class="btn btn-outline-success" onclick="axios.get()" type="submit" id="button">Get Weather!!</button>
-        </form>
+        <div class="d-flex" id="bar">
+        <input class="form-control me-2" type="search" placeholder="Zip Code" aria-label="Zip Code" id="searchBox">
+        <button class="btn btn-outline-success" type="submit" id="button">Get Weather!!</button>
+        </div>
     </div>
     <div class="container d-grid gap-3" id="weather">
         <div class="container border border-dark" id="container2">
             <div class="row border border-dark">
-                <div class="col text-center h3">City</div>
+                <div class="col text-center h2 bg-warning">City</div>
             </div>
             <div class="row border border-dark">
                 <div class="col text-center h4" id="city"></div>
@@ -32,7 +32,7 @@
         </div>
         <div class="container border border-dark" id="container3">
             <div class="row">
-                <div class="col text-center h3">Temperature</div>
+                <div class="col text-center h2 bg-warning">Temperature</div>
             </div>
             <div class="row">
                 <div class="col text-center h4 border border-dark" id="kelvin"></div>
@@ -42,13 +42,14 @@
         </div>
         <div class="container" id="container4">
             <div class="row border border-dark">
-                <div class="col text-center h3">Weather Conditions</div>
+                <div class="col text-center h2 bg-warning">Weather Conditions</div>
             </div>
             <div class="row border border-dark">
                 <div class="col text-center h4" id="conditions"></div>
             </div>
         </div>
-        <div class="container d-flex justify-content-center align-items-center" id="image">
+        <div class="container d-flex justify-content-center align-items-center">
+            <img src="" class="img-fluid h-50 w-50" id="image">
         </div>
         <div class="container" id="error">
             <div class="row border border-dark">
