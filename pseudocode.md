@@ -1,6 +1,6 @@
 # Weather App
 
-User wants to know the weather in their current location. They input their current zip code into the search tab and click the button to get their current city, temperature, weather condtions, and a image showing the current weather conditions.
+User wants to know the weather in their current location. They input their current zip code into the search tab and click the button to get their current city, temperature, weather condtions, and an image based on the current temperature.
 
 ### Requirements
 1. Execute an axios call using an api key to get the weather based on the zip code entered by the user.
