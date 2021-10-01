@@ -74,10 +74,10 @@ function axiosCall() {
             if (temperature > 294) {
                 image.src = "./img/hot.png";
             };
-            if ((temperature < 293) && (temperature > 283)) {
+            if ((temperature < 295) && (temperature > 279)) {
                 image.src = "./img/thermometer.png";
             };
-            if (temperature < 282) {
+            if (temperature < 280) {
                 image.src = "./img/cold.png"
             };
         })
